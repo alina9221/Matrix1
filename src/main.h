@@ -28,6 +28,15 @@ namespace math
 
         friend Matrix operator*(const Matrix& A, const Matrix& B); // // Дружественная функция умножение матриц
 
-        Matrix operator+=(const Matrix& A); // Дружественная функция сложения матриц
+        Matrix& operator+=(const Matrix& A);  // Функция сложения матриц
+
+        Matrix& operator-=(const Matrix& A);  // Функция вычитания матриц
+
+        Matrix& operator*=(double scalar);  // Функция умножения матриц
+
+        friend std::ostream& operator<<(std::ostream &os, const Matrix &matrix); // Перегрузка оператора вывода <<
+
+        friend std::istream& operator>>(std::istream &is, Matrix &matrix) // Перегрузка оператора ввода >>
+
     };
-} 
+}   
